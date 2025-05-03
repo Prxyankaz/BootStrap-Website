@@ -1,4 +1,14 @@
-
+.hero {
+    background: linear-gradient(to right, #0e1d58, #8ebcf4);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white; /* Optional: ensures text is readable */
+    position: relative;
+    z-index: 1;
+    padding: 100px 0;
+    text-align: center;
+  }
 .skills-section {
 display: flex;
 gap: 40px;
@@ -16,7 +26,7 @@ text-align: center;
 width: 130px;
 height: 130px;
 border-radius: 50%;
-background: conic-gradient(#00bfff var(--percentage), #222 var(--percentage));
+background: conic-gradient(#4369c4 var(--percentage), #222 var(--percentage));
 display: flex;
 align-items: center;
 justify-content: center;
@@ -56,12 +66,7 @@ letter-spacing: 0.5px;
 body {
     font-family: 'Segoe UI', sans-serif;
 }
-.hero {
-    background: linear-gradient(to right, #4e54c8, #8f94fb);
-    color: white;
-    padding: 200px 0;
-    text-align: center;
-}
+
 .section-title {
     font-size: 2.5rem;
     margin-bottom: 40px;
@@ -108,11 +113,12 @@ body {
     border-radius: 50%;
     border: 7px solid rgba(248, 184, 78, 0.2);
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    
 }
 /* Container around the toggle button */
 .container1 {
     position: fixed; /* Keep the toggle visible */
-    top: 60px; /* Distance from the top of viewport */
+    top: 80px; /* Distance from the top of viewport */
     left:0px; /* Distance from the left */
     z-index: 1045; /* Above other content but below Bootstrap modal (z-index 1050) */
 
@@ -130,6 +136,20 @@ body {
     align-items: center;
     justify-content: center;
 
+}
+
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    font-weight: bold;
+    color: #333;
+  }
+.nav-link.active {
+    color: #ffc107 !important;
+  }
+.navbar{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 }
 
 /* Wider sidebar */
@@ -173,6 +193,19 @@ body {
     border-radius: 4px;
 }
 
-    /* Responsive: hide toggle on large screens if you want it always open */
+/* Hover effect for project cards */
+.project-card {
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+border: none;
+}
+
+.project-card:hover {
+transform: translateY(-8px);
+box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+background:linear-gradient(to right, #5783e9, #a8cdfe);;
+
+ /* Light background on hover */
+}
+  
     
  
