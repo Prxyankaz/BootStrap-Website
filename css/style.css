@@ -26,7 +26,7 @@ text-align: center;
 width: 130px;
 height: 130px;
 border-radius: 50%;
-background: conic-gradient(#4369c4 var(--percentage), #222 var(--percentage));
+background: conic-gradient(#3659aa var(--percentage), #222 var(--percentage));
 display: flex;
 align-items: center;
 justify-content: center;
