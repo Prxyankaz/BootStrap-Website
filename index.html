@@ -1,27 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>My Bootstrap Page</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Harini | Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
 
-  <!-- Bootstrap 5 CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- Optional Custom Styles -->
-  <link rel="stylesheet" href="css/style.css">
+    body {
+      font-family: 'Segoe UI', sans-serif;
+    }
+    .hero {
+      background: linear-gradient(to right, #4e54c8, #8f94fb);
+      color: white;
+      padding: 200px 0;
+      text-align: center;
+    }
+    .section-title {
+      font-size: 2.5rem;
+      margin-bottom: 40px;
+    }
+    
+    .footer {
+      background-color: #343a40;
+      color: white;
+      text-align: center;
+      padding: 30px 0;
+    }
+    .hero {
+        padding: 100px 0; /* default for small screens */
+      }
+      
+      @media (min-width: 768px) {
+        .hero {
+          padding: 150px 0; /* small laptops */
+        }
+      }
+      
+      @media (min-width: 1024px) {
+        .hero {
+          padding: 180px 0; /* standard laptops */
+        }
+      }
+      
+      @media (min-width: 1440px) {
+        .hero {
+          padding: 240px 0; /* large laptops and desktops */
+        }
+      }
+      .hero-img-container {
+        height: 30vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      
+      .hero-img-container img {
+        width: 450px;
+        height: 450px;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 7px solid rgba(248, 184, 78, 0.2);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+      }
+      
+  </style>
 </head>
 <body>
 
-  <!-- NAVBAR GOES HERE -->
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4">
+    <a class="navbar-brand" href="#">PORTFOLIO</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
 
-  <div class="container mt-5">
-    <!-- PAGE CONTENT GOES HERE -->
-  </div>
 
-  <!-- FOOTER GOES HERE -->
+<!-- Hero Section -->
+<section class="hero">
+    <div class="container">
+      <div class="row align-items-center">
+        <!-- Left: Text -->
+        <div class="col-lg-6 text-start">
+          <h1 class="display-6">Hi, I'm</h1>
+          <h1 class="display-1">HARINI PRIYANKA</h1>
+          <p class="lead">Computer Science Student | Web Developer | IoT Enthusiast</p>
+          <a href="contact.html" class="btn btn-light btn-lg mt-4">Get in Touch</a>
+        </div>
+        <!-- Right: Photo -->
+        <div class="col-lg-6">
+            <div class="hero-img-container">
+              <img src="assets/p.jpg" alt="Harini Photo" class="img-fluid" />
+            </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- About Section -->
+  <section id="about" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="section-title text-center">About Me</h2>
+      <p class="text-center">I'm a Computer Science student passionate about building smart systems using IoT, Embedded Tech, and Full-Stack Development. I love integrating real-world devices with software to solve practical problems.</p>
+    </div>
+  </section>
 
-  <!-- Bootstrap 5 JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Projects Section -->
+  <section id="projects" class="py-5">
+    <div class="container">
+      <h2 class="section-title text-center">Projects</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+            <div class="card project-card shadow-sm h-100 d-flex flex-column">
+              <div class="card-body">
+                <h5 class="card-title">Smart Wheelchair</h5>
+                <p class="card-text">A fall detection and obstacle-aware wheelchair using ESP32 and MPU6050 with Firebase cloud integration.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card project-card shadow-sm h-100 d-flex flex-column">
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">Traffic Management System</h5>
+                <p class="card-text">A web-based system prioritizing emergency vehicles and monitoring real-time traffic using sensors and Firebase.</p>
+                <a href="https://traffic-management-backend.onrender.com/" target="_blank" class="btn btn-outline-primary mt-auto">View Website</a>
+              </div>
+            </div>
+          </div>
+          
+        <div class="col-md-4">
+          <div class="card project-card shadow-sm h-100 d-flex flex-column">
+            <div class="card-body">
+              <h5 class="card-title">EDP Website</h5>
+              <p class="card-text">A CRUD-based Flask web app for managing entrepreneurship programs with login, stats, and registration.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <!-- Footer -->
+  <footer class="footer mt-5">
+    <div class="container">
+      <p>&copy; 2025 Harini | All rights reserved</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

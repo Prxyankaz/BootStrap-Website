@@ -1,27 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>My Bootstrap Page</title>
-
-  <!-- Bootstrap 5 CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- Optional Custom Styles -->
-  <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Me | Harini</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f9f9f9;
+    }
+    .section-title {
+      font-size: 2.5rem;
+      margin-bottom: 40px;
+    }
+  </style>
 </head>
 <body>
 
-  <!-- NAVBAR GOES HERE -->
-
-  <div class="container mt-5">
-    <!-- PAGE CONTENT GOES HERE -->
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4">
+  <a class="navbar-brand" href="index.html">Harini</a>
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+      <li class="nav-item"><a class="nav-link active" href="#">About</a></li>
+      <li class="nav-item"><a class="nav-link" href="index.html#projects">Projects</a></li>
+      <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+    </ul>
   </div>
+</nav>
 
-  <!-- FOOTER GOES HERE -->
+<!-- About Section -->
+<section class="py-5">
+  <div class="container">
+    <h2 class="section-title text-center">About Me</h2>
+    <p class="text-center mb-5">I'm Harini, a Computer Science student passionate about building real-world systems through IoT, Embedded Tech, and Full-Stack Development. I thrive on turning ideas into working prototypes and love exploring intersections between hardware and software.</p>
 
-  <!-- Bootstrap 5 JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <div class="accordion" id="aboutAccordion">
+      <!-- Education -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingOne">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+            🎓 Education
+          </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#aboutAccordion">
+          <div class="accordion-body">
+            <ul>
+              <li>B.Tech in Computer Science and Engineering - Amrita School of Computing</li>
+              <li>Relevant Courses: Embedded Systems, IoT, DBMS, Web Development, DSA</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Skills -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingTwo">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+            🛠️ Technical Skills
+          </button>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#aboutAccordion">
+          <div class="accordion-body">
+            <ul>
+              <li><strong>Languages:</strong> Python, C, Java, HTML, CSS, JavaScript</li>
+              <li><strong>Frameworks:</strong> Flask, Bootstrap</li>
+              <li><strong>IoT & Embedded:</strong> ESP32, STM32, Firebase, MQTT</li>
+              <li><strong>Tools:</strong> Keil, Arduino IDE, VS Code, Git</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Certifications -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingThree">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+            📄 Certifications
+          </button>
+        </h2>
+        <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#aboutAccordion">
+          <div class="accordion-body">
+            <ul>
+              <li>IoT Specialization - Coursera</li>
+              <li>Responsive Web Design - freeCodeCamp</li>
+              <li>Python for Everybody - University of Michigan (Coursera)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Interests -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingFour">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour">
+            ❤️ Interests
+          </button>
+        </h2>
+        <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#aboutAccordion">
+          <div class="accordion-body">
+            <p>I enjoy blending creativity and tech—whether it's through building IoT prototypes, designing intuitive web apps, or creating posters. I also enjoy participating in hackathons and exploring AI-powered tools.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer bg-dark text-white text-center py-4">
+  <div class="container">
+    <p>&copy; 2025 Harini | All rights reserved</p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
