@@ -80,6 +80,7 @@ body {
 }
 .hero {
     padding: 100px 0; /* default for small screens */
+    
 }
 
 @media (min-width: 768px) {
@@ -107,14 +108,16 @@ body {
 }
 
 .hero-img-container img {
-    width: 450px;
-    height: 450px;
+    width: 50vw; /* Adjusts based on viewport width */
+    max-width: 450px; /* Prevents it from getting too large */
+    height: auto; /* Keeps aspect ratio */
+    aspect-ratio: 1/1; /* Ensures it's always a square */
     object-fit: cover;
     border-radius: 50%;
     border: 7px solid rgba(248, 184, 78, 0.2);
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-    
 }
+
 /* Container around the toggle button */
 .container1 {
     position: fixed; /* Keep the toggle visible */
