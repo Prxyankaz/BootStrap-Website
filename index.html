@@ -1,74 +1,19 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Harini | Portfolio</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <style>
-
-    body {
-      font-family: 'Segoe UI', sans-serif;
-    }
-    .hero {
-      background: linear-gradient(to right, #4e54c8, #8f94fb);
-      color: white;
-      padding: 200px 0;
-      text-align: center;
-    }
-    .section-title {
-      font-size: 2.5rem;
-      margin-bottom: 40px;
-    }
-    
-    .footer {
-      background-color: #343a40;
-      color: white;
-      text-align: center;
-      padding: 30px 0;
-    }
-    .hero {
-        padding: 100px 0; /* default for small screens */
-      }
-      
-      @media (min-width: 768px) {
-        .hero {
-          padding: 150px 0; /* small laptops */
-        }
-      }
-      
-      @media (min-width: 1024px) {
-        .hero {
-          padding: 180px 0; /* standard laptops */
-        }
-      }
-      
-      @media (min-width: 1440px) {
-        .hero {
-          padding: 240px 0; /* large laptops and desktops */
-        }
-      }
-      .hero-img-container {
-        height: 30vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-      
-      .hero-img-container img {
-        width: 450px;
-        height: 450px;
-        object-fit: cover;
-        border-radius: 50%;
-        border: 7px solid rgba(248, 184, 78, 0.2);
-        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-      }
-      
-  </style>
+  <link href="css/style.css" rel="stylesheet">
+  
+  
 </head>
 <body>
 
   <!-- Navbar -->
+
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4">
     <a class="navbar-brand" href="#">PORTFOLIO</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -78,15 +23,33 @@
       <ul class="navbar-nav">
         <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
         <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
         <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
       </ul>
     </div>
   </nav>
+  <!-- side bar section -->
+  <div class="container1">
+    <button class="btn btn-outline-light ms-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar" aria-controls="sidebar">
+        >
+      </button>
+      <div class="offcanvas offcanvas-start" tabindex="-1" id="sidebar">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title">Navigation</h5>
+          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+          <nav class="nav flex-column">
+            <a class="nav-link" href="#">Home</a>
+            <a class="nav-link" href="#projects">Projects</a>
+            <a class="nav-link" href="#skills">Skills</a>
+            <button id="themeToggleSidebar" class="nav-link text-start">Toggle Theme</button>
+          </nav>
+        </div>
+      </div>
+    </div>
 
-
-<!-- Hero Section -->
-<section class="hero">
+  <!-- Hero Section -->
+  <section class="hero">
     <div class="container">
       <div class="row align-items-center">
         <!-- Left: Text -->
@@ -105,52 +68,118 @@
       </div>
     </div>
   </section>
-  
+
   <!-- About Section -->
+
   <section id="about" class="py-5 bg-light">
     <div class="container">
-      <h2 class="section-title text-center">About Me</h2>
-      <p class="text-center">I'm a Computer Science student passionate about building smart systems using IoT, Embedded Tech, and Full-Stack Development. I love integrating real-world devices with software to solve practical problems.</p>
+      <h2 class="section-title text-center">About</h2>
+      <p class="text-center">I'm a Computer Science student passionate about Full-Stack Development, IoT, and Embedded Systems. I enjoy building smart, end-to-end solutions that seamlessly integrate software with real-world hardware. From designing dynamic web applications to developing intelligent embedded systems, I thrive on solving practical problems through technology.</p>
+      <div class="d-flex justify-content-center">
+        <a class="btn btn-sm btn-outline-secondary" href="about.html" role="button">Explore More</a>
+      </div>
+      
     </div>
   </section>
 
   <!-- Projects Section -->
+
   <section id="projects" class="py-5">
     <div class="container">
       <h2 class="section-title text-center">Projects</h2>
       <div class="row g-4">
+  
+        <!-- Smart Wheelchair -->
         <div class="col-md-4">
-            <div class="card project-card shadow-sm h-100 d-flex flex-column">
-              <div class="card-body">
-                <h5 class="card-title">Smart Wheelchair</h5>
-                <p class="card-text">A fall detection and obstacle-aware wheelchair using ESP32 and MPU6050 with Firebase cloud integration.</p>
+          <div class="card project-card shadow-sm h-100 d-flex flex-column">
+            <div class="card-body">
+              <h5 class="card-title">Smart Wheelchair</h5>
+              <p class="card-text">A fall detection and obstacle-aware wheelchair using ESP32 and MPU6050 with Firebase cloud integration.</p>
+              <a class="btn btn-sm btn-outline-secondary" data-bs-toggle="collapse" href="#smartWheelchairMore" role="button" aria-expanded="false" aria-controls="smartWheelchairMore">Learn More</a>
+              <div class="collapse mt-3" id="smartWheelchairMore">
+                <p><strong>Tech Stack:</strong> ESP32, MPU6050, Firebase, C++, HTML/CSS</p>
+                <p><strong>Details:</strong> Real-time obstacle detection and fall alerts via cloud updates. Used in smart mobility applications.</p>
+                <a href="https://smart-wheel-chair.onrender.com" target="_blank" class="btn btn-outline-primary mt-auto">View Website</a>
               </div>
             </div>
           </div>
-          <div class="col-md-4">
-            <div class="card project-card shadow-sm h-100 d-flex flex-column">
-              <div class="card-body d-flex flex-column">
-                <h5 class="card-title">Traffic Management System</h5>
-                <p class="card-text">A web-based system prioritizing emergency vehicles and monitoring real-time traffic using sensors and Firebase.</p>
-                <a href="https://traffic-management-backend.onrender.com/" target="_blank" class="btn btn-outline-primary mt-auto">View Website</a>
+        </div>
+  
+        <!-- Traffic Management System -->
+        <div class="col-md-4">
+          <div class="card project-card shadow-sm h-100 d-flex flex-column">
+            <div class="card-body">
+              <h5 class="card-title">Traffic Management System</h5>
+              <p class="card-text">A web-based system prioritizing emergency vehicles and monitoring real-time traffic.</p>
+              <a class="btn btn-sm btn-outline-secondary" data-bs-toggle="collapse" href="#trafficMore" role="button" aria-expanded="false" aria-controls="trafficMore">Learn More</a>
+              <div class="collapse mt-3" id="trafficMore">
+                <p><strong>Tech Stack:</strong> Node.js, Express.js, MongoDB Atlas, WebSockets, HTML, CSS, JavaScript</p>
+                <p><strong>Details:</strong> Real-time emergency alerts with role-based user access for emergency vehicles and traffic control management.</p>
+                <a href="https://traffic-management-backend.onrender.com" target="_blank" class="btn btn-outline-primary mt-auto">View Website</a>
               </div>
             </div>
           </div>
-          
+        </div>
+  
+        <!-- EDP Website -->
         <div class="col-md-4">
           <div class="card project-card shadow-sm h-100 d-flex flex-column">
             <div class="card-body">
               <h5 class="card-title">EDP Website</h5>
               <p class="card-text">A CRUD-based Flask web app for managing entrepreneurship programs with login, stats, and registration.</p>
+              <a class="btn btn-sm btn-outline-secondary" data-bs-toggle="collapse" href="#edpMore" role="button" aria-expanded="false" aria-controls="edpMore">Learn More</a>
+              <div class="collapse mt-3" id="edpMore">
+                <p><strong>Tech Stack:</strong> Python, Flask, MySQL, HTML, CSS</p>
+                <p><strong>Details:</strong> Includes user authentication, course management, progress tracking, and admin reporting dashboard.</p>
+                
+            </div>
             </div>
           </div>
         </div>
+  
       </div>
     </div>
   </section>
+  <!-- SKILLS SECTION-->
+  <section id="skills">
+    <h2 class="section-title text-center">Skills</h2>
+  <div class="skills-section">
+    <div class="skill">
+      <div class="circle" style="--percentage: 90%;">
+        <span>90%</span>
+      </div>
+      <div class="label">Python</div>
+    </div>
+    <div class="skill">
+      <div class="circle" style="--percentage: 80%;">
+        <span>80%</span>
+      </div>
+      <div class="label">HTML/CSS/JS</div>
+    </div>
+    <div class="skill">
+      <div class="circle" style="--percentage: 75%;">
+        <span>75%</span>
+      </div>
+      <div class="label">C++</div>
+    </div>
+    <div class="skill">
+      <div class="circle" style="--percentage: 85%;">
+        <span>85%</span>
+      </div>
+      <div class="label">Mysql</div>
+    </div>
+    <div class="skill">
+        <div class="circle" style="--percentage: 55%;">
+          <span>55%</span>
+        </div>
+        <div class="label">Node.js/Express.js</div>
+      </div>
 
+  </div>
+</section>
   
   <!-- Footer -->
+
   <footer class="footer mt-5">
     <div class="container">
       <p>&copy; 2025 Harini | All rights reserved</p>
@@ -158,6 +187,8 @@
   </footer>
 
   <!-- Bootstrap JS -->
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>
